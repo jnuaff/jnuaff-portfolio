@@ -1,0 +1,153 @@
+#root {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 40px 40px 40px;
+	max-width: 1000px;
+}
+
+.app {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5px;
+	position: relative;
+}
+
+.app header {
+	position: sticky;
+	top: 0;
+	height: max-content;
+	padding-top: 40px;
+}
+
+.app header h2{
+	margin-bottom: 1rem;
+}
+
+.info-wrapper {
+	padding-top: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.info-wrapper__content{
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	gap: 1.25em;
+}
+
+.info-wrapper__content h3 {
+	padding-bottom: 4px;
+}
+
+.info-wrapper__items {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	gap: 1em;
+}
+
+.info-wrapper__items img {
+	height: 125px;
+	width: 220px;
+	aspect-ratio: 16/9;
+}
+
+.info-wrapper__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	gap: 0.5em;
+}
+
+.info-item__link {
+	display: flex;
+	width: max-content;
+	align-items: center;
+	gap: 0.5em;
+}
+
+.info-item__chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+
+.info-item__chip {
+	background: #213547;
+	color: white;
+	padding: 0.1rem 0.2rem;
+	font-size: 0.8em;
+}
+
+.divider {
+	height: 1px;
+	background: #213547;
+}
+
+.teaser-links{
+	display: flex;
+	flex-direction: column;
+	gap: 0.25em;
+}
+
+.teaser-links__link {
+	cursor: pointer;
+	text-transform: uppercase;
+	position: relative;
+}
+.teaser-links__link:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	background: #213547;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+}
+
+.active:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	background: #213547;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 100%;
+	left: 0;
+}
+
+.teaser-links__link:hover:after {
+	width: 100%;
+	left: 0;
+}
+
+.contact-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	gap: 1.25em;
+}
+
+.contact-wrapper__links {
+	display: flex;
+	align-content: center;
+	gap: 1em;
+}
+
+.contact-wrapper__link svg {
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.contact-wrapper__link:hover svg {
+	transform: scale(1.1); 
+}
+

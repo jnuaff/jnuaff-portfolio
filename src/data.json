@@ -1,0 +1,47 @@
+{
+    "navigation": {
+      "items": [
+        {
+          "label": "About",
+          "id": "about"
+        },
+        {
+          "label": "Projects",
+          "id": "work"
+        },
+        {
+          "label": "Contact",
+          "id": "contact"
+        }
+      ]
+    },
+    "projects": [
+      {
+        "title": "Teddy Awards Website Redesign",
+        "link": "https://www.teddyaward.tv/de/",
+        "description": "Developed the redesign of the new Teddy Awards Website. Created modular templates for integration into a CMS using HTML5 / Nunjucks and Javascript. Worked on semantic HTML, accessibility, CSS standards, modern communication design, and backend.",
+        "stack": ["next js", "typescript"]
+      },
+      {
+        "title": "xCurator",
+        "link": "https://xcurator.landesmuseum.de/",
+        "description": "Web application designed for two museums: the Badisches Landesmuseum in Karlsruhe and Allard Pierson in Amsterdam. Integrated objects from both museums, allowing users to explore a diverse range of museum artifacts. Users can filter objects based on various criteria and add them to their favorites. Next.js was employed for the project, and GraphQL and Apollo Client were utilized for fetching data from the backend. The layout was built using React Styled Components, Stitches, and Radix UI.",
+        "stack": ["Next.js", "GraphQL", "Apollo Client", "React Styled Components", "Stitches", "Radix UI"]
+      }
+    ],
+    "personalProjects": [
+      {
+        "title": "Movies Search Engine",
+        "link": "https://movies-finder123.netlify.app/",
+        "description": "I've developed a movie search engine utilizing The Movie Database (TMDB) API. Users can seamlessly add movies to a watchlist and remove them at their convenience. This application was built with React and TypeScript. A challenge in this project was enabling users to manage their watchlist by adding and removing movies.",
+        "stack": ["React", "TypeScript"]
+      },
+      {
+        "title": "Text Analyzer",
+        "link": "https://movies-finder123.netlify.app/",
+        "description": "This application was built with React and TypeScript. It allows users to analyze a text by counting the number of characters and paragraphs, among other functions. The challenge of this project was to work with regular expressions.",
+        "stack": ["React", "TypeScript"]
+      }
+    ]
+  }
+  
