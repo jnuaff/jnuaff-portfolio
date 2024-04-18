@@ -41,14 +41,14 @@ const personalProjects: Project[] = [
 	},
 	{
 		title: "Text Analyzer",
-		link: "https://movies-finder123.netlify.app/",
+		link: "https://text-analizer.netlify.app/",
 		description:
 			"				This application allows users to analyze a text by counting the number of characters and paragraphs, among other functions. The main goal of this project was to dive into regular expressions.",
 		stack: ["React", "TypeScript"],
 	},
 	{
 		title: "The Mate Tee guide",
-		link: "https://movies-finder123.netlify.app/",
+		link: "https://mate-tee-guide.netlify.app/",
 		description:
 			"Since I'm living in Berlin, there are not many people who are familiar with mate, so I've developed this application to explain curious people how important this kind of \"tea\" is to me. The challenge of this project was to play with animations and transitions, integrate some 3D objects and think out of the box in terms of design.",
 		stack: ["React", "TypeScript"],
