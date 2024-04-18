@@ -18,14 +18,15 @@ const projects: Project[] = [
 		title: "Teddy Awards Website Redesign",
 		link: "https://www.teddyaward.tv/de/",
 		description:
-			"Developed the redesign of the new Teddy Awards Website. Created modular templates for integration into a CMS using HTML5 / Nunjucks and Javascript. Worked on semantic HTML, accessibility, CSS standards, modern communication design, and backend.",
-		stack: ["next js", "typescript"],
+		"Developed the redesign of the new Teddy Awards Website, creating modular templates for integration into a CMS using HTML5/Nunjucks and JavaScript. I focused on semantic HTML, accessibility, CSS standards, modern communication design, and backend integration. I've worked alongside a Senior Developer who guided me through the project with mentoring and code reviews.",
+		stack: ["HTML5 / Nunjucks", "CSS", "JavaScript", "Webpack"],
 	},
 	{
 		title: "xCurator",
 		link: "https://xcurator.landesmuseum.de/",
 		description:
-			"Web application designed for two museums: the Badisches Landesmuseum in Karlsruhe and Allard Pierson in Amsterdam. Integrated objects from both museums, allowing users to explore a diverse range of museum artifacts. Users can filter objects based on various criteria and add them to their favorites. Next.js was employed for the project, and GraphQL and Apollo Client were utilized for fetching data from the backend. The layout was built using React Styled Components, Stitches, and Radix UI.",
+
+		"Integrated objects from two museum databases, enabling users to explore a diverse range of museum artifacts. I worked in a multidisciplinary team, collaborating with designers and backend developers. I was responsible for implementing some features, such as creating new stories in the user section. The main challenge was fetching data from the database, which required me to dive into GraphQL and Apollo Client to send requests through an API.",
 		stack: ["Next.js", "GraphQL", "Apollo Client", "React Styled Components", "Stitches", "Radix UI"],
 	},
 ];
@@ -35,22 +36,22 @@ const personalProjects: Project[] = [
 		title: "Movies Search Engine",
 		link: "https://movies-finder123.netlify.app/",
 		description:
-			"	I've developed a movie search engine utilizing The Movie Database (TMDB) API. Users can seamlessly add movies to a watchlist and remove them at their convenience. This application was built with React and TypeScript. A challenge in this project was enabling users to manage their watchlist by adding and removing movies.",
+		"I've developed a movie search engine utilizing The Movie Database (TMDB) API. Users can seamlessly add movies to a watchlist and remove them at their convenience. This application was built with React and TypeScript. A challenge in this project was enabling users to manage their watchlist within a Client-Side Application, allowing them to add and remove movies. I overcame this challenge by using React Context alongside local storage." ,
 		stack: ["React", "TypeScript"],
 	},
 	{
 		title: "Text Analyzer",
 		link: "https://movies-finder123.netlify.app/",
 		description:
-			"				This application was built with React and TypeScript. It allows users to analyze a text by counting the number of characters and paragraphs, among other functions. The challange of this project was to work with regular expressions.",
+			"				This application allows users to analyze a text by counting the number of characters and paragraphs, among other functions. The main goal of this project was to dive into regular expressions.",
 		stack: ["React", "TypeScript"],
 	},
 	{
-		title: "The mate guide",
+		title: "The Mate Tee guide",
 		link: "https://movies-finder123.netlify.app/",
 		description:
-			"Since I'm living in Berlin, there are not many people who are familiar with mate, so I've developed this application to explain to curious people how important this kind of \"tea\" is to me. The challenge of this project was to work with animations and transitions, and integrate some 3D objects with it. I wanted to think out of the box in terms of design.",
-		stack: ["React"],
+			"Since I'm living in Berlin, there are not many people who are familiar with mate, so I've developed this application to explain curious people how important this kind of \"tea\" is to me. The challenge of this project was to play with animations and transitions, integrate some 3D objects and think out of the box in terms of design.",
+		stack: ["React", "TypeScript"],
 	},
 ];
 
@@ -122,7 +123,7 @@ function App() {
 				<div className="info-wrapper__content" id="about" ref={aboutRef}>
 					<h3>About me</h3>
 					<p>
-						I'm a self-taught frontend developer currently undergoing an apprenticeship at 3pc. I'm focused on creating clean and semantic
+						I'm a self-taught frontend developer currently doing an apprenticeship at 3pc. I'm focused on creating clean and semantic
 						web applications following accessibility standards. I care about accessible design and development, learn from my teammates,
 						and keep up to date trying new technologies.
 					</p>
@@ -175,17 +176,20 @@ function App() {
 				<div className="contact-wrapper" id="contact" ref={contactRef}>
 					<h3>Let's connect!</h3>
 					<p>
-						Reach out if you have a project in mind, want to collaborate, or are curious about the code behind my projects and let's
-						create something amazing together.
+						Reach out if you have a project in mind, want to collaborate, or are curious about the code behind my projects.
 					</p>
 					<ul className="contact-wrapper__links">
 						<li>
-							<a className="contact-wrapper__link" href="https://www.linkedin.com/in/juan-ferreyra-24172b232/" target="_blank" rel="noreferrer">
+							<a
+								className="contact-wrapper__link"
+								href="https://www.linkedin.com/in/juan-ferreyra-24172b232/"
+								target="_blank"
+								rel="noreferrer">
 								<LinkedinIcon width="24" height="24" fill="#213547" />
 							</a>
 						</li>
 						<li>
-							<a className="contact-wrapper__link" href="https://github.com/jnuaff"  target="_blank" rel="noreferrer">
+							<a className="contact-wrapper__link" href="https://github.com/jnuaff" target="_blank" rel="noreferrer">
 								<GithubIcon width="24" height="24" fill="#213547" />
 							</a>
 						</li>
