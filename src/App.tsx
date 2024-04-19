@@ -34,15 +34,6 @@ const projects: Project[] = [
 
 const personalProjects: Project[] = [
 	{
-		title: "This Portfolio",
-		link: "",
-		description:
-			"				I've developed this portfolio to showcase my projects and skills. The main goal of this project was to create a clean and accessible design. I've used React and TypeScript to build this application. I've also used the Interesection Observer API for the navigation.",
-		stack: ["React", "TypeScript"],
-		code: "https://github.com/jnuaff/jnuaff-portfolio",
-		hasLink: false,
-	},
-	{
 		title: "Text Analyzer",
 		link: "https://text-analyzer-netify.netlify.app/",
 		description:
@@ -68,6 +59,15 @@ const personalProjects: Project[] = [
 		stack: ["React", "TypeScript"],
 		code: "https://github.com/jnuaff/movies-finder",
 		hasLink: true,
+	},
+	{
+		title: "This Portfolio",
+		link: "",
+		description:
+			"				I've developed this portfolio to showcase my projects and skills. The main goal of this project was to create a clean and accessible design. I've used React and TypeScript to build this application. I've also used the Interesection Observer API for the navigation.",
+		stack: ["React", "TypeScript"],
+		code: "https://github.com/jnuaff/jnuaff-portfolio",
+		hasLink: false,
 	},
 ];
 
