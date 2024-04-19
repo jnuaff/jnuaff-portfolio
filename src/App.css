@@ -41,15 +41,29 @@
 	gap: 2rem;
 }
 
-.info-wrapper__content{
+.info-item__wrapper{
+	position: relative;
+	display: inline;
+}
+
+/* change later, this is a temporary styling because of font awesome settings */
+.test{
+	position: absolute;
+	top: 55%;
+	right:-18px;
+	transform: translateY(-50%);
+}
+
+
+.info-wrapper__paragraph{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: start;
-	gap: 1.25em;
+	gap: 0.5em;
 }
 
 .info-wrapper__content h3 {
-	padding-bottom: 4px;
+	padding-bottom: 16px;
 }
 
 .info-wrapper__items {

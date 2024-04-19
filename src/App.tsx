@@ -11,6 +11,8 @@ interface Project {
 	link: string;
 	description: string;
 	stack: string[];
+	code?: string;
+	hasLink?: boolean;
 }
 
 const projects: Project[] = [
@@ -18,33 +20,36 @@ const projects: Project[] = [
 		title: "Teddy Awards Website Redesign",
 		link: "https://www.teddyaward.tv/de/",
 		description:
-		"Developed the redesign of the new Teddy Awards Website, creating modular templates for integration into a CMS using HTML5/Nunjucks and JavaScript. I focused on semantic HTML, accessibility, CSS standards, modern communication design, and backend integration. I've worked alongside a Senior Developer who guided me through the project with mentoring and code reviews.",
+			"Developed the redesign of the new Teddy Awards Website, creating modular templates for integration into a CMS using HTML5/Nunjucks and JavaScript. I focused on semantic HTML, accessibility, CSS standards, modern communication design, and backend integration. I've worked alongside a Senior Developer who guided me through the project with mentoring and code reviews.",
 		stack: ["HTML5 / Nunjucks", "CSS", "JavaScript", "Webpack"],
 	},
 	{
 		title: "xCurator",
 		link: "https://xcurator.landesmuseum.de/",
 		description:
-
-		"Integrated objects from two museum databases, enabling users to explore a diverse range of museum artifacts. I worked in a multidisciplinary team, collaborating with designers and backend developers. I was responsible for implementing some features, such as creating new stories in the user section. The main challenge was fetching data from the database, which required me to dive into GraphQL and Apollo Client to send requests through an API.",
-		stack: ["Next.js", "GraphQL", "Apollo Client", "React Styled Components", "Stitches", "Radix UI"],
+			"Integrated objects from two museum databases, enabling users to explore a diverse range of museum artefacts. I worked in a multidisciplinary team, collaborating with designers and backend developers. I was responsible for implementing some features, such as creating new stories in the user section. The main challenge of this was fetching data from the database, which required me to dive into GraphQL and Apollo Client to send requests through an API.",
+		stack: ["Next.js", "Typescript", "GraphQL", "Apollo Client", "React Styled Components", "Stitches", "Radix UI"],
 	},
 ];
 
 const personalProjects: Project[] = [
 	{
-		title: "Movies Search Engine",
-		link: "https://movies-finder123.netlify.app/",
+		title: "This Portfolio",
+		link: "",
 		description:
-		"I've developed a movie search engine utilizing The Movie Database (TMDB) API. Users can seamlessly add movies to a watchlist and remove them at their convenience. This application was built with React and TypeScript. A challenge in this project was enabling users to manage their watchlist within a Client-Side Application, allowing them to add and remove movies. I overcame this challenge by using React Context alongside local storage." ,
+			"				I've developed this portfolio to showcase my projects and skills. The main goal of this project was to create a clean and accessible design. I've used React and TypeScript to build this application. I've also used the Interesection Observer API for the navigation.",
 		stack: ["React", "TypeScript"],
+		code: "https://github.com/jnuaff/jnuaff-portfolio",
+		hasLink: false,
 	},
 	{
 		title: "Text Analyzer",
-		link: "https://text-analizer.netlify.app/",
+		link: "https://text-analyzer-netify.netlify.app/",
 		description:
 			"				This application allows users to analyze a text by counting the number of characters and paragraphs, among other functions. The main goal of this project was to dive into regular expressions.",
 		stack: ["React", "TypeScript"],
+		code: "https://github.com/jnuaff/text-analyzer",
+		hasLink: true,
 	},
 	{
 		title: "The Mate Tee guide",
@@ -52,6 +57,17 @@ const personalProjects: Project[] = [
 		description:
 			"Since I'm living in Berlin, there are not many people who are familiar with mate, so I've developed this application to explain curious people how important this kind of \"tea\" is to me. The challenge of this project was to play with animations and transitions, integrate some 3D objects and think out of the box in terms of design.",
 		stack: ["React", "TypeScript"],
+		code: "https://github.com/jnuaff/mate-tee-guide",
+		hasLink: true,
+	},
+	{
+		title: "Movies Search Engine",
+		link: "https://movies-finder123.netlify.app/",
+		description:
+			"I've developed a movie search engine utilizing The Movie Database (TMDB) API. Users can seamlessly add movies to a watchlist and remove them at their convenience. This application was built with React and TypeScript, the data was fetched using the TanStack Query Library. A challenge in this project was enabling users to manage their watchlist within a Client-Side Application, allowing them to add and remove movies. I overcame it by using React Context alongside local storage.",
+		stack: ["React", "TypeScript"],
+		code: "https://github.com/jnuaff/movies-finder",
+		hasLink: true,
 	},
 ];
 
@@ -123,9 +139,8 @@ function App() {
 				<div className="info-wrapper__content" id="about" ref={aboutRef}>
 					<h3>About me</h3>
 					<p>
-						I'm a self-taught frontend developer currently doing an apprenticeship at 3pc. I'm focused on creating clean and semantic
-						web applications following accessibility standards. I care about accessible design and development, learn from my teammates,
-						and keep up to date trying new technologies.
+						I'm a self-taught frontend developer currently doing an apprenticeship at <a href="https://3pc.de/">3pc</a>. I'm focused on
+						creating clean and semantic web applications following accessibility standards. I care about writing reusable, maintainable, and high-quality code, learning from my teammates and keep up to date with the new technologies.
 					</p>
 				</div>
 				<span className="divider" />
@@ -156,11 +171,25 @@ function App() {
 					<ul className="info-wrapper__items">
 						{personalProjects.map((project) => (
 							<li className="info-wrapper__item">
-								<a className="info-item__link" href={project.link} target="_blank" rel="noreferrer">
+								{project.hasLink ? (
+									<a className="info-item__link" href={project.link} target="_blank" rel="noreferrer">
+										<h4>{project.title}</h4>
+										<FontAwesomeIcon icon={externalLinkIcon} size="sm" />
+									</a>
+								) : (
 									<h4>{project.title}</h4>
-									<FontAwesomeIcon icon={externalLinkIcon} size="sm" />
-								</a>
+								)}
+
 								<p>{project.description}</p>
+								<p>
+									You can see the code{" "}
+									<a href={project.code} className="info-item__wrapper">
+										<span>
+											here
+										</span>
+										<FontAwesomeIcon className="test" icon={externalLinkIcon} size="xs" />
+									</a>
+								</p>
 								<div className="info-item__chips">
 									{project.stack.map((stack, index) => (
 										<span key={index} className="info-item__chip">
@@ -175,9 +204,7 @@ function App() {
 				<span className="divider" />
 				<div className="contact-wrapper" id="contact" ref={contactRef}>
 					<h3>Let's connect!</h3>
-					<p>
-						Reach out if you have a project in mind, want to collaborate, or are curious about the code behind my projects.
-					</p>
+					<p>Reach out if you have a project in mind, want to collaborate, or are curious about the code behind my projects.</p>
 					<ul className="contact-wrapper__links">
 						<li>
 							<a
