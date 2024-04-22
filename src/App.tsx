@@ -20,7 +20,7 @@ const projects: Project[] = [
 		title: "Teddy Awards Website Redesign",
 		link: "https://www.teddyaward.tv/de/",
 		description:
-			"Developed the redesign of the new Teddy Awards Website, creating modular templates for integration into a CMS using HTML5/Nunjucks and JavaScript. I focused on semantic HTML, accessibility, CSS standards, modern communication design, and backend integration. I've worked alongside a Senior Developer who guided me through the project with mentoring and code reviews.",
+			"Developed the redesign of the new Teddy Awards Website, creating modular templates for integration into a CMS using HTML5/Nunjucks and JavaScript. I focused on semantic HTML, accessibility and CSS standards. As the main frontend developer, I ensured we met the deadline for the Teddy Award event by actively engaging in regular check-ins and code reviews with a senior developer, enhancing my knowledge along the way.",
 		stack: ["HTML5 / Nunjucks", "CSS", "JavaScript", "Webpack"],
 	},
 	{
