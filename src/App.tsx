@@ -17,18 +17,25 @@ interface Project {
 
 const projects: Project[] = [
 	{
+		title: "Digital Archive of Independent Performing Artists",
+		link: "https://dafdk.testing2.3pc.de/de/home",
+		description:
+			"Headless web application built with Nuxt 3 and TypeScript for managing and exploring archival content of independent performing artists. Data is fetched via an API and stored in a SQL database, with all content fully editable through a CMS. I was the main frontend developer, responsible for architecture, component development, accessibility, and API integration.",
+		stack: ["Nuxt 3", "TypeScript", "Vue 3", "SQL"],
+	},
+	{
 		title: "Teddy Awards Website Redesign",
 		link: "https://www.teddyaward.tv/de/",
 		description:
-			"Developed the redesign of the new Teddy Awards Website, creating modular templates for integration into a CMS using HTML5/Nunjucks and JavaScript. I focused on semantic HTML, accessibility and CSS standards. As the main frontend developer, I ensured we met the deadline for the Teddy Award event by actively engaging in regular check-ins and code reviews with a senior developer, enhancing my knowledge along the way.",
+			"Developed the redesign of the new Teddy Awards website, creating modular templates for CMS integration using HTML5, Nunjucks, and JavaScript. I focused on semantic HTML, accessibility, and CSS standards. As the main frontend developer, I collaborated closely with a senior developer through regular check-ins and code reviews to meet the deadline for the Teddy Award event.",
 		stack: ["HTML5 / Nunjucks", "CSS", "JavaScript", "Webpack"],
 	},
 	{
 		title: "xCurator",
 		link: "https://xcurator.landesmuseum.de/",
 		description:
-			"Integrated objects from two museum databases, enabling users to explore a diverse range of museum artefacts. I worked in a multidisciplinary team, collaborating with designers and backend developers. I was responsible for implementing some features, such as creating new stories in the user section. The main challenge of this was fetching data from the database, which required me to dive into GraphQL and Apollo Client to send requests through an API.",
-		stack: ["Next.js", "Typescript", "GraphQL", "Apollo Client", "React Styled Components", "Stitches", "Radix UI"],
+			"Web platform integrating objects from multiple museum databases, allowing users to explore curated artefacts. I worked in a multidisciplinary team with designers and backend developers and implemented user-facing features such as story creation. A key challenge was handling complex data fetching using GraphQL and Apollo Client.",
+		stack: ["Next.js", "TypeScript", "GraphQL", "Apollo Client", "Styled Components", "Radix UI"],
 	},
 ];
 
@@ -40,15 +47,6 @@ const personalProjects: Project[] = [
 			"				This application allows users to analyze a text by counting the number of characters and paragraphs, among other functions. The main goal of this project was to dive into regular expressions.",
 		stack: ["React", "TypeScript"],
 		code: "https://github.com/jnuaff/text-analyzer",
-		hasLink: true,
-	},
-	{
-		title: "The Mate Tee guide",
-		link: "https://mate-tee-guide.netlify.app/",
-		description:
-			"Since I'm living in Berlin, there are not many people who are familiar with mate, so I've developed this application to explain curious people how important this kind of \"tea\" is to me. The challenge of this project was to play with animations and transitions, integrate some 3D objects and think out of the box in terms of design.",
-		stack: ["React", "TypeScript"],
-		code: "https://github.com/jnuaff/mate-tee-guide",
 		hasLink: true,
 	},
 	{
@@ -114,7 +112,7 @@ function App() {
 		<div className="app">
 			<header>
 				<h1>Juan Ferreyra</h1>
-				<h2>Junior Frontend Developer</h2>
+				<h2>Web Developer</h2>
 				<ul className="teaser-links">
 					<li>
 						<span onClick={() => scrollToRef(aboutRef)} className={`teaser-links__link ${activeSection === "about" ? "active" : ""}`}>
@@ -139,8 +137,10 @@ function App() {
 				<div className="info-wrapper__content" id="about" ref={aboutRef}>
 					<h3>About me</h3>
 					<p>
-						I'm a self-taught frontend developer currently doing an apprenticeship at <a href="https://3pc.de/">3pc</a>. I'm focused on
-						creating clean and semantic web applications following accessibility standards. I care about writing reusable, maintainable, and high-quality code, learning from my teammates and keep up to date with the new technologies.
+						I was born in Argentina and have been living in Berlin since 2019. My interest in technology has always been driven by curiosity and self-learning. What started as exploration gradually became a professional focus on web development.
+						After completing my Abschluss in Anwendungsentwicklung, I worked across both frontend and backend development. Today, my main focus is frontend engineering, supported by a solid understanding of backend concepts and system interactions.
+						Since 2022, I have been part of <a href="https://3pc.de/">3pc</a>, where I contribute to building and maintaining complex web applications.
+						I enjoy collaborating with teams, solving problems, and helping turn ideas into reliable, well-crafted digital products. Below are some selected projects I have worked on:
 					</p>
 				</div>
 				<span className="divider" />
