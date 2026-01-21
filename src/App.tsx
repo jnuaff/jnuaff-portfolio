@@ -18,7 +18,7 @@ interface Project {
 const projects: Project[] = [
 	{
 		title: "Digital Archive of Independent Performing Artists",
-		link: "https:/performingarchive.org/de/home",
+		link: "https://performingarchive.org/de/home",
 		description:
 			"Headless web application built with Nuxt 3 and TypeScript for managing and exploring archival content of independent performing artists. Data is fetched via an API and stored in a SQL database, with all content fully editable through a CMS. I was the main frontend developer, responsible for architecture, component development, accessibility, and API integration.",
 		stack: ["Nuxt 3", "TypeScript", "Vue 3", "SQL"],
@@ -137,10 +137,13 @@ function App() {
 				<div className="info-wrapper__content" id="about" ref={aboutRef}>
 					<h3>About me</h3>
 					<p>
-						I was born in Argentina and have been living in Berlin since 2019. My interest in technology has always been driven by curiosity and self-learning. What started as exploration gradually became a professional focus on web development.
-						After completing my Abschluss in Anwendungsentwicklung, I worked across both frontend and backend development. Today, my main focus is frontend engineering, supported by a solid understanding of backend concepts and system interactions.
-						Since 2022, I have been part of <a href="https://3pc.de/">3pc</a>, where I contribute to building and maintaining complex web applications.
-						I enjoy collaborating with teams, solving problems, and helping turn ideas into reliable, well-crafted digital products. Below are some selected projects I have worked on:
+						I am a web developer based in Berlin, originally from Argentina. I have worked across both frontend and backend development,
+						building a strong understanding of full-stack systems and workflows. Since 2022, I have been part of{" "}
+						<a href="https://3pc.de/">3pc</a>, where I develop and maintain complex web applications with a focus on frontend architecture
+						and writing clean, semantic code that follows accessibility guidelines. I enjoy working in cross-functional teams, solving
+						technical challenges, and delivering maintainable solutions.
+						<br />
+						Below are some selected projects I have worked on.
 					</p>
 				</div>
 				<span className="divider" />
@@ -184,9 +187,7 @@ function App() {
 								<p>
 									You can see the code{" "}
 									<a href={project.code} className="info-item__wrapper">
-										<span>
-											here
-										</span>
+										<span>here</span>
 										<FontAwesomeIcon className="test" icon={externalLinkIcon} size="xs" />
 									</a>
 								</p>
