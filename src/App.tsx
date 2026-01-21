@@ -18,7 +18,7 @@ interface Project {
 const projects: Project[] = [
 	{
 		title: "Digital Archive of Independent Performing Artists",
-		link: "https://dafdk.testing2.3pc.de/de/home",
+		link: "https:/performingarchive.org/de/home",
 		description:
 			"Headless web application built with Nuxt 3 and TypeScript for managing and exploring archival content of independent performing artists. Data is fetched via an API and stored in a SQL database, with all content fully editable through a CMS. I was the main frontend developer, responsible for architecture, component development, accessibility, and API integration.",
 		stack: ["Nuxt 3", "TypeScript", "Vue 3", "SQL"],
